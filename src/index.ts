@@ -1,9 +1,8 @@
-import { Aplicacion } from './app/app';
-import database from './app/config/database';
+import { Aplicacion } from './App/app';
 
 async function main() {
-	const app = new Aplicacion(3000);
-	await app.start();
+	const app = new Aplicacion(4000);
+	await app.Start();
 }
 
 main();

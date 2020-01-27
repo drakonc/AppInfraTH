@@ -1,5 +1,5 @@
-import { Router, Request, Response } from "express";
-import errorController from "../controllers/404Controller";
+import { Router } from "express";
+import errorController from "../Controllers/404Controller";
 
 class ErrorRouter {
 

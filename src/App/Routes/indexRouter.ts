@@ -1,5 +1,5 @@
-import { Router, Request, Response } from "express";
-import indexController from "../controllers/indexController";
+import { Router } from "express";
+import indexController from "../Controllers/indexController";
 
 class IndexRouter {
 
