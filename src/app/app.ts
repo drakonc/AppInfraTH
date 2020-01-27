@@ -12,8 +12,10 @@ const rutas: any[] = [indexRouter, erroRouter]
 export class Aplicacion {
 
 	public app: Application;
+	public port?: number | string;
 
-	constructor(private port?: number | string) {
+	constructor(port?: number | string) {
+		this.port = port;
 		this.app = express();
 		this.settings();
 		this.middleware();
@@ -21,7 +23,7 @@ export class Aplicacion {
 	}
 
 	private settings(): void {
-		this.app.set("port", process.env.PORT || 3000);
+		this.app.set("port", this.port || process.env.PORT || 3000);
 		this.app.set("views", path.join(__dirname, "views"));
 		this.app.engine(".hbs", exphbs({
 			layoutsDir: path.join(this.app.get("views"), "layouts"),
