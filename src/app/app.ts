@@ -5,6 +5,9 @@ import path from "path";
 
 //Rutas
 import indexRouter from "./routes/indexRoute";
+import erroRouter from "./routes/404Route";
+
+const rutas: any[] = [indexRouter, erroRouter]
 
 export class Aplicacion {
 
@@ -37,10 +40,7 @@ export class Aplicacion {
 
 	private routers(): void {
 		this.app.use(express.static(path.join(__dirname, 'public')));
-		this.app.use(indexRouter);
-		this.app.use('*', (req, res) => {
-			res.status(404).render('404');
-		});
+		this.app.use(rutas);
 	}
 
 	async start() {
