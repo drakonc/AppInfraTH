@@ -4,7 +4,7 @@ import morgan from "morgan";
 import path from "path";
 
 //Rutas
-import indexRouter from "./Routes/Index/indexRouter";
+import indexRouter from "./Routes/indexRouter";
 import erroRouter from "./Routes/404/404Router";
 import authenticationRouter from "./Routes/Auth/authenticationRouter";
 import linksRouter from "./Routes/Links/linksRouter";
