@@ -1,5 +1,5 @@
 import { Router } from "express";
-import linksController from "../Controllers/linksController";
+import linksController from "../../Controllers/Links/linksController";
 
 class LinksRouter {
 

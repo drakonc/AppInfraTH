@@ -1,5 +1,5 @@
 import { Router } from "express";
-import authenticationController from "../Controllers/authenticationController";
+import authenticationController from "../../Controllers/Auth/authenticationController";
 
 class AuthenticationRoute {
 
